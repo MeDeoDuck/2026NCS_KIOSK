@@ -1,17 +1,26 @@
 import numpy as np
 import pandas as pd
 
-scores = np.array([
-    # 국, 영, 수
-    [80, 100, 90], # A학생
-    [85, 70, 95], # B학생
-    [89, 85, 87] # C학생
-])
+items = {
+    'a': [100, 80, 90],
+    'b': [95, 75, 85],
+    'c': [70, 100, 99]
+}
 
-# axis: 0 --> 열, 1 --> 행
-print(f"전체 평균 : {np.mean(scores)}")
-print(f"국 영 수 과목별 평균 : {np.mean(scores, axis=0)}") # 열 기준 연산
-print(f"A학생, B학생, C학생 최고 점수 : {np.max(scores, axis=1)}") # 행 기준 연산
+df_items = pd.DataFrame(items, index=[1, 2, 3])
+print(df_items)
+
+# scores = np.array([
+#     # 국, 영, 수
+#     [80, 100, 90], # A학생
+#     [85, 70, 95], # B학생
+#     [89, 85, 87] # C학생
+# ])
+#
+# # axis: 0 --> 열, 1 --> 행
+# print(f"전체 평균 : {np.mean(scores)}")
+# print(f"국 영 수 과목별 평균 : {np.mean(scores, axis=0)}") # 열 기준 연산
+# print(f"A학생, B학생, C학생 최고 점수 : {np.max(scores, axis=1)}") # 행 기준 연산
 
 # items = [40, 7, 99, -3]
 # print(np.sum(items))
