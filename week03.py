@@ -3,15 +3,25 @@ import pandas as pd
 import seaborn as sns
 
 mpg = sns.load_dataset('mpg')
+print(mpg.head(3))
+print(mpg.iat[1, 8])
+# iloc --> index location
+#print(mpg.iloc[:, [0, 1]])
+# 2 ~ 4
+#print(mpg.iloc[2:5, [0, 1]])
+# loc -> location
+# print(mpg.loc[:, 'model_year':"origin"])
+
+
 # print(mpg.head(3))
 # print(mpg.tail(3))
 # print(mpg.query('mpg > 17'))
-mpg_asc = mpg.sort_values('mpg')
-print(mpg_asc)
-
-# 'displacement' 날리기
-mpg_asx_disp_out = mpg_asc.drop(columns=['displacement'])
-print(mpg_asx_disp_out)
+# mpg_asc = mpg.sort_values('mpg')
+# print(mpg_asc)
+#
+# # 'displacement' 날리기
+# mpg_asx_disp_out = mpg_asc.drop(columns=['displacement'])
+# print(mpg_asx_disp_out)
 
 # items = {
 #     'a': [100, 80, 90],
