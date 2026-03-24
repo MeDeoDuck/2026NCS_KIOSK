@@ -19,8 +19,20 @@ import pandas as pd
 # print(mpg.iloc[1:4, [0, 2]])
 # #print(mpg)
 
-mpg = sns.load_dataset('mpg')
-group_mpg = pd.DataFrame(mpg.groupby(by='origin'))
-print(group_mpg)
-print(mpg['origin'].nunique())
-print(mpg.describe())
+# mpg = sns.load_dataset('mpg')
+# group_mpg = pd.DataFrame(mpg.groupby(by='origin'))
+# print(group_mpg)
+# print(mpg['origin'].nunique())
+# print(mpg.describe())
+
+def squares(n):
+    return n*n
+
+items = [
+    [100, 95, 70],
+    [80, 75, 100],
+    [90, 85, 99]
+]
+df_items = pd.DataFrame(items, index=[1, 2, 3], columns=['a', 'b', 'c'])
+print(df_items)
+print(df_items.apply(squares))
