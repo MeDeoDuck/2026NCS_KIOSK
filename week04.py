@@ -6,8 +6,8 @@ import seaborn as sns
 mpg = sns.load_dataset('mpg')
 #print(mpg.info())
 
-mpg = mpg.drop(columns=['cylinders', 'displacement', 'horsepower', 'weight', 'acceleration', 'model_year'])
-mpg = mpg.query('origin == "europe" and mpg >= 30.0').sort_values('mpg', ascending=False)
+mpg = (mpg.drop(columns=['cylinders', 'displacement', 'horsepower', 'weight', 'acceleration', 'model_year'])
+       .query('origin == "europe" and mpg >= 30.0').sort_values('mpg', ascending=False))
 
 #print(
 #    mpg[['origin', 'mpg', 'name']]
