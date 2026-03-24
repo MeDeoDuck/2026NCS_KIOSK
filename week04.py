@@ -25,14 +25,23 @@ import pandas as pd
 # print(mpg['origin'].nunique())
 # print(mpg.describe())
 
-def squares(n):
-    return n*n
+# def squares(n):
+#     return n*n
 
-items = [
-    [100, 95, 70],
-    [80, 75, 100],
-    [90, 85, 99]
-]
-df_items = pd.DataFrame(items, index=[1, 2, 3], columns=['a', 'b', 'c'])
-print(df_items)
-print(df_items.apply(squares))
+# items = [
+#     [100, 95, 70],
+#     [80, 75, 100],
+#     [90, 85, 99]
+# ]
+# df_items = pd.DataFrame(items, index=[1, 2, 3], columns=['a', 'b', 'c'])
+# print(df_items)
+# print(df_items.apply(lambda n : n * n))
+
+# 6개의 결측치가 있다 => 1. 마력 컬럼을 날린다. 2. 6개의 값을 채워 넣음 / 6개의 행을 날린다
+
+mpg = sns.load_dataset('mpg')
+print(mpg.info())
+# mpg.dropna(subset=['horsepower'], inplace=True) # 원본 업데이트
+# print(mpg.info())
+mpg_cleean = mpg.dropna(subset=['horsepower']) # 사본 생성
+print(mpg_cleean.info())
