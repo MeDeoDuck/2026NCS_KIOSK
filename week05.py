@@ -29,3 +29,15 @@ n = 10000000
 NUMBER = int(input("Enter a number: "))
 func = time_measure_decorator(one_to_n_formula)
 print(func(NUMBER))
+# Open-Closed Principle : 확장에는 열려있고, 수정에는 닫혀있어야 한다. (기존 코드를 수정하지 않고 기능을 추가할 수 있어야 한다.)
+# 클로져 => 데코레이터에 필수
+# 클래스가 있어야 유지보수가 쉬움
+
+
+# 연관 > 의존
+# 의존
+# [has a 관계] => 자동차 has a 엔진, 자동차 has a 바퀴, 자동차 has a 핸들
+# compoosition => 같이 감
+# aggregation => 따로 감(자동차 & 엔진은 has a 관계지만 약한 결합 관계)
+# 생각하기에 따라 다름
+# [is a 관계] => 자동차 is a 탈것, 자동차 is a 이동수단 => 상속 관계
