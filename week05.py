@@ -36,8 +36,11 @@ print(func(NUMBER))
 
 # 연관 > 의존
 # 의존
-# [has a 관계] => 자동차 has a 엔진, 자동차 has a 바퀴, 자동차 has a 핸들
-# compoosition => 같이 감
+# [has a 관계](포함  관계) => 자동차 has a 엔진, 자동차 has a 바퀴, 자동차 has a 핸들
+# compoosition => 같이 감 => 라이프 사이클
+    # composition은 main에서 class가 들어가지 않음. orderProcessor has a menu
 # aggregation => 따로 감(자동차 & 엔진은 has a 관계지만 약한 결합 관계)
 # 생각하기에 따라 다름
 # [is a 관계] => 자동차 is a 탈것, 자동차 is a 이동수단 => 상속 관계
+# Menu 객체를 OrderProcessor 객체가 포함하는 경우 => composition
+# Menu 객체를 OrderProcessor 객체가 참조하는 경우 => aggregation
